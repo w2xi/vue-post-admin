@@ -30,9 +30,13 @@
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
 
-          <v-list-item-content>
+          <v-list-item-content class="py-0">
             <v-list-item-title>
-              <router-link class="text-decoration-none text--primary" :to="item.path">
+              <router-link 
+                style="width: 100%; display: inline-block"
+                class="text-decoration-none text--primary py-2" 
+                :to="item.path"
+              >
                 {{ item.title }}
               </router-link>
             </v-list-item-title>
@@ -68,8 +72,8 @@
     data: () => ({ 
       drawer: null,
       items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard', path: '/about' },
-        { title: 'Photos', icon: 'mdi-image', path: '/about' },
+        { title: 'Dashboard', icon: 'mdi-view-dashboard', path: '/dashboard' },
+        { title: 'Posts', icon: 'mdi-image', path: '/posts' },
         { title: 'About', icon: 'mdi-help-box', path: '/about' },
       ],
     }),
